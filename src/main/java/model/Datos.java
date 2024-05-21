@@ -3,10 +3,10 @@ package model;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record DatosClima(
-        //@JsonAlias("name") String localidad,
-        //@JsonAlias("country") String pais
-
+public record Datos(
+        @JsonAlias("location") DatosUbicacion ubicacion,
+        @JsonAlias("current") DatosClimaActual climaActual
 ) {
 }
