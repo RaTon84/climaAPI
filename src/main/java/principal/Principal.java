@@ -11,7 +11,7 @@ public class Principal {
 
     public void start(){
         var json = consumoAPI.obtenerDatos("http://api.weatherapi.com/v1/current.json?key=519436c41e8d4128885144459242105&q=berisso&aqi=no");
-        //System.out.println(json);
+        System.out.println(json);
 
         var datos = convierteDatos.obtenerDatos(json, Datos.class);
         System.out.println(datos.ubicacion());
